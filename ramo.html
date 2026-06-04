@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramo de Tulipanes Azules - Edición Especial Mágica</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #050508; /* Fondo negro profundo idéntico al render */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .contenedor-ramo {
+      width: 95vmin;
+      height: 95vmin;
+      max-width: 800px;
+      max-height: 800px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor-ramo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <defs>
+        <linearGradient id="rosa-petalo" x1="0%" y1="100%" x2="0%" y2="0%">
+          <stop offset="0%" stop-color="#143275" />
+          <stop offset="40%" stop-color="#2c5cc5" />
+          <stop offset="80%" stop-color="#568df5" />
+          <stop offset="100%" stop-color="#b0cbff" />
+        </linearGradient>
+
+        <linearGradient id="rosa-oscuro" x1="0%" y1="100%" x2="0%" y2="0%">
+          <stop offset="0%" stop-color="#071330" />
+          <stop offset="100%" stop-color="#264fa3" />
+        </linearGradient>
+
+        <linearGradient id="papel-rosa" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+          <stop offset="30%" stop-color="#e0e6ed" />
+          <stop offset="70%" stop-color="#a3b1c2" />
+          <stop offset="100%" stop-color="#556270" />
+        </linearGradient>
+
+        <linearGradient id="hoja-verde" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#1b4325" />
+          <stop offset="50%" stop-color="#2d6e3d" />
+          <stop offset="100%" stop-color="#46a35b" />
+        </linearGradient>
+
+        <g id="petalo-flotante">
+          <path d="M 0,0 C -12,-8 -18,-25 -8,-35 C -3,-40 5,-32 0,0 Z" fill="url(#rosa-petalo)" />
+          <path d="M 0,0 C -1,-12 -1,-25 2,-33 C 0,-25 0,-12 0,0 Z" fill="#ffffff" opacity="0.3" />
+        </g>
+
+        <g id="tulipan-base">
+          <path d="M 0,0 C -25,-15 -35,-55 -15,-75 C -5,-85 10,-70 0,0 Z" fill="url(#rosa-oscuro)" />
+          <path d="M 0,0 C 25,-15 35,-55 15,-75 C 5,-85 -10,-70 0,0 Z" fill="url(#rosa-oscuro)" />
+          <path d="M 0,5 C -30,-5 -35,-65 -5,-80 C 0,-82 5,-82 10,-80 C 40,-65 35,-5 0,5 Z" fill="url(#rosa-petalo)" />
+          <path d="M 0,0 C -2,-25 -2,-55 3,-75 C 1,-55 0,-25 0,0 Z" fill="#ffffff" opacity="0.4" />
+        </g>
+
+        <path id="tallo" d="M 0,0 Q 10,100 20,250" fill="none" stroke="url(#hoja-verde)" stroke-width="5" stroke-linecap="round" />
+      </defs>
+
+      <g id="estrellas-fondo" fill="#ffffff">
+        <circle cx="150" cy="120" r="1.5" opacity="0.6"/>
+        <circle cx="280" cy="80" r="1" opacity="0.4"/>
+        <circle cx="350" cy="150" r="2" opacity="0.8"/>
+        <circle cx="450" cy="90" r="1.5" opacity="0.5"/>
+        <circle cx="620" cy="140" r="2.5" opacity="0.7"/>
+        <circle cx="700" cy="250" r="1" opacity="0.3"/>
+        <circle cx="100" cy="300" r="2" opacity="0.6"/>
+        <circle cx="220" cy="220" r="1.5" opacity="0.5"/>
+        <circle cx="580" cy="220" r="1.5" opacity="0.6"/>
+        <circle cx="680" cy="380" r="2" opacity="0.4"/>
+        <circle cx="120" cy="480" r="1" opacity="0.5"/>
+        <circle cx="200" cy="550" r="1.5" opacity="0.3"/>
+        <circle cx="640" cy="580" r="2" opacity="0.7"/>
+        <circle cx="740" cy="480" r="1" opacity="0.4"/>
+
+        <path d="M 200,180 L 202,185 L 207,187 L 202,189 L 200,194 L 198,189 L 193,187 L 198,185 Z" opacity="0.7"/>
+        <path d="M 550,110 L 551.5,114 L 556,115.5 L 551.5,117 L 550,121 L 548.5,117 L 544,115.5 L 548.5,114 Z" opacity="0.9"/>
+        <path d="M 650,280 L 651,283 L 654,284 L 651,285 L 650,288 L 649,285 L 646,284 L 649,283 Z" opacity="0.6"/>
+        <path d="M 140,260 L 141.5,264 L 146,265.5 L 141.5,267 L 140,271 L 138.5,267 L 134,265.5 L 138.5,264 Z" opacity="0.8"/>
+      </g>
+
+      <g id="envoltorio-trasero">
+        <path d="M 400,750 L 150,350 C 100,250 200,100 400,150 C 600,100 700,250 650,350 Z" fill="url(#papel-rosa)" opacity="0.9" />
+        <path d="M 400,750 L 100,300 C 80,200 250,50 400,150 Z" fill="url(#papel-rosa)" opacity="0.7" />
+        <path d="M 400,750 L 700,300 C 720,200 550,50 400,150 Z" fill="url(#papel-rosa)" opacity="0.7" />
+      </g>
+
+      <g id="tallos-y-hojas">
+        <use href="#tallo" x="320" y="220" transform="rotate(-15, 320, 220)" />
+        <use href="#tallo" x="370" y="210" transform="rotate(-5, 370, 210)" />
+        <use href="#tallo" x="420" y="210" transform="rotate(5, 420, 210)" />
+        <use href="#tallo" x="470" y="220" transform="rotate(15, 470, 220)" />
+        <use href="#tallo" x="250" y="300" transform="rotate(-25, 250, 300)" />
+        <use href="#tallo" x="310" y="290" transform="rotate(-10, 310, 290)" />
+        <use href="#tallo" x="400" y="280" />
+        <use href="#tallo" x="490" y="290" transform="rotate(10, 490, 290)" />
+        <use href="#tallo" x="550" y="300" transform="rotate(25, 550, 300)" />
+
+        <path d="M 400,700 C 250,600 120,450 160,320 C 180,380 280,550 400,700 Z" fill="url(#hoja-verde)" />
+        <path d="M 400,700 C 550,600 680,450 640,320 C 620,380 520,550 400,700 Z" fill="url(#hoja-verde)" />
+        <path d="M 400,700 C 300,550 200,400 280,250 C 310,320 350,500 400,700 Z" fill="url(#hoja-verde)" />
+        <path d="M 400,700 C 500,550 600,400 520,250 C 490,320 450,500 400,700 Z" fill="url(#hoja-verde)" />
+        <path d="M 400,700 C 350,500 380,350 340,200 C 380,260 400,450 400,700 Z" fill="url(#hoja-verde)" />
+        <path d="M 400,700 C 450,500 420,350 460,200 C 420,260 400,450 400,700 Z" fill="url(#hoja-verde)" />
+      </g>
+
+      <g id="fila-superior">
+        <use href="#tulipan-base" x="320" y="220" transform="rotate(-20, 320, 220)" />
+        <use href="#tulipan-base" x="370" y="180" transform="rotate(-7, 370, 180)" />
+        <use href="#tulipan-base" x="430" y="180" transform="rotate(7, 430, 180)" />
+        <use href="#tulipan-base" x="480" y="220" transform="rotate(20, 480, 220)" />
+      </g>
+
+      <g id="cuerpo-central">
+        <use href="#tulipan-base" x="250" y="310" transform="rotate(-30, 250, 310)" />
+        <use href="#tulipan-base" x="300" y="280" transform="rotate(-18, 300, 280)" />
+        <use href="#tulipan-base" x="355" y="265" transform="rotate(-5, 355, 265)" />
+        <use href="#tulipan-base" x="410" y="260" transform="rotate(0, 410, 260)" />
+        <use href="#tulipan-base" x="465" y="265" transform="rotate(5, 465, 265)" />
+        <use href="#tulipan-base" x="520" y="280" transform="rotate(18, 520, 280)" />
+        <use href="#tulipan-base" x="570" y="310" transform="rotate(30, 570, 310)" />
+      </g>
+
+      <g id="fila-delantera">
+        <use href="#tulipan-base" x="270" y="400" transform="rotate(-25, 270, 400)" />
+        <use href="#tulipan-base" x="320" y="375" transform="rotate(-12, 320, 375)" />
+        <use href="#tulipan-base" x="375" y="360" transform="rotate(-3, 375, 360)" />
+        <use href="#tulipan-base" x="430" y="360" transform="rotate(3, 430, 360)" />
+        <use href="#tulipan-base" x="485" y="375" transform="rotate(12, 485, 375)" />
+        <use href="#tulipan-base" x="535" y="400" transform="rotate(25, 535, 400)" />
+      </g>
+
+      <g id="envoltorio-frontal">
+        <path d="M 150,350 L 400,750 L 410,500 L 220,320 Z" fill="url(#papel-rosa)" opacity="0.95" stroke="#ffffff" stroke-width="1" />
+        <path d="M 650,350 L 400,750 L 390,480 L 580,320 Z" fill="url(#papel-rosa)" opacity="0.95" stroke="#e0e6ed" stroke-width="1" />
+        <ellipse cx="400" cy="620" rx="25" ry="10" fill="#a3b1c2" />
+        <path d="M 400,620 Q 350,650 330,700 M 400,620 Q 450,650 470,700" fill="none" stroke="#556270" stroke-width="4" stroke-linecap="round" />
+      </g>
+
+      <g id="petalos-cayendo">
+        <use href="#petalo-flotante" x="180" y="150" transform="scale(1.3) rotate(45, 180, 150)" opacity="0.85" />
+        <use href="#petalo-flotante" x="110" y="280" transform="scale(0.9) rotate(110, 110, 280)" opacity="0.9" />
+        
+        <use href="#petalo-flotante" x="120" y="550" transform="scale(1.4) rotate(-35, 120, 550)" opacity="0.8" />
+        <use href="#petalo-flotante" x="220" y="630" transform="scale(1.1) rotate(20, 220, 630)" opacity="0.95" />
+        <use href="#petalo-flotante" x="130" y="720" transform="scale(0.8) rotate(75, 130, 720)" opacity="0.75" />
+
+        <use href="#petalo-flotante" x="650" y="160" transform="scale(1.2) rotate(-65, 650, 160)" opacity="0.85" />
+        <use href="#petalo-flotante" x="720" y="230" transform="scale(1) rotate(15, 720, 230)" opacity="0.9" />
+        
+        <use href="#petalo-flotante" x="710" y="520" transform="scale(1.3) rotate(-115, 710, 520)" opacity="0.85" />
+        <use href="#petalo-flotante" x="660" y="660" transform="scale(1.1) rotate(40, 660, 660)" opacity="0.9" />
+        <use href="#petalo-flotante" x="730" y="700" transform="scale(0.7) rotate(-15, 730, 700)" opacity="0.6" />
+
+        <use href="#petalo-flotante" x="310" y="70" transform="scale(0.8) rotate(-10, 310, 70)" opacity="0.7" />
+        <use href="#petalo-flotante" x="520" y="65" transform="scale(0.9) rotate(55, 520, 65)" opacity="0.8" />
+        <use href="#petalo-flotante" x="420" y="770" transform="scale(1) rotate(135, 420, 770)" opacity="0.85" />
+      </g>
+    </svg>
+  </div>
+
+</body>
+</html>
